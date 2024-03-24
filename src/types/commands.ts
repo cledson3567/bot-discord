@@ -8,7 +8,7 @@ interface CommandsProps {
     options: CommandInteractionOptionResolver,
 };
 
-export type CommandType = ApplicationCommandData & CommandsProps & {
+export type CommandType = ApplicationCommandData & {
     execute(params: CommandsProps): any
 };
 
