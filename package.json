@@ -1,0 +1,25 @@
+{
+  "name": "bot-discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "build": "tsc --config tsconfig.json src/**/*",
+    "start": "node build/src/app.js",
+    "formatt": "prettier --config .prettierrc.json --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
+}
