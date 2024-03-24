@@ -1,8 +1,10 @@
-import { BitFieldResolvable, Client, GatewayIntentsString, IntentsBitField } from 'discord.js';
+import { BitFieldResolvable, Client, Collection, GatewayIntentsString, IntentsBitField } from 'discord.js';
 import { config } from 'dotenv';
+import { CommandType } from '../types/commands';
 config();
 
 export class ExtendedClient extends Client {
+    public commands: Collection<string, CommandType> = new Collection();
     constructor() {
         super({
             intents: Object.keys(IntentsBitField.Flags) as BitFieldResolvable<GatewayIntentsString, number>,
