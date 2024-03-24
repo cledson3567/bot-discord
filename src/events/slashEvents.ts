@@ -5,9 +5,7 @@ export default new Event({
     name: "interactionCreate",
     execute(interaction) {
         if (!interaction.isCommand()) return;
-
         const command = client.commands.get(interaction.commandName);
-        console.log(command);
         if (!command) return;
         const options = interaction.options as CommandInteractionOptionResolver;
         command.execute({
